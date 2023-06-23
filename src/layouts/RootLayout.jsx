@@ -1,6 +1,11 @@
-import { Box, Container, Heading } from "@chakra-ui/react"
-import citySilhouette from "../assets/city silhouette.png"
+// rrd
 import { Outlet } from "react-router-dom"
+
+// chakra ui
+import { Box, Container, Heading } from "@chakra-ui/react"
+
+// assets
+import citySilhouette from "../assets/city silhouette.png"
 
 export default function RootLayout() {
 	return (
