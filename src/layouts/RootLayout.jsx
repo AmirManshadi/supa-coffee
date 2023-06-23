@@ -10,7 +10,7 @@ import citySilhouette from "../assets/city silhouette.png"
 export default function RootLayout() {
 	return (
 		<>
-			<Container as="header" centerContent>
+			<Container as="header" centerContent my="4">
 				<Heading fontFamily="Righteous">SupaCoffee</Heading>
 			</Container>
 			<Container
