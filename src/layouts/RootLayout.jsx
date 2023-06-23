@@ -11,7 +11,7 @@ export default function RootLayout() {
 	return (
 		<>
 			<Container as="header" centerContent my="4">
-				<Heading fontFamily="Righteous">
+				<Heading fontFamily="Righteous" color="purple.600">
 					<Link to="/">SupaCoffee</Link>
 				</Heading>
 			</Container>
@@ -23,6 +23,7 @@ export default function RootLayout() {
 					lg: "container.lg",
 					xl: "container.xl",
 				}}
+				fontFamily="'Poppins', sans-serif"
 			>
 				<Outlet />
 			</Container>
