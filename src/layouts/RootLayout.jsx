@@ -1,5 +1,5 @@
 // rrd
-import { Outlet } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 
 // chakra ui
 import { Box, Container, Heading } from "@chakra-ui/react"
@@ -11,7 +11,9 @@ export default function RootLayout() {
 	return (
 		<>
 			<Container as="header" centerContent my="4">
-				<Heading fontFamily="Righteous">SupaCoffee</Heading>
+				<Heading fontFamily="Righteous">
+					<Link to="/">SupaCoffee</Link>
+				</Heading>
 			</Container>
 			<Container
 				as="main"
