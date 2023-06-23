@@ -1,5 +1,10 @@
+// rrd
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
+
+// layouts
 import RootLayout from "./layouts/RootLayout"
+
+// pages
 import Home from "./pages/Home"
 import Create from "./pages/Create"
 import Edit from "./pages/Edit"
