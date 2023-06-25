@@ -1,3 +1,6 @@
+// rrd
+import { Link } from "react-router-dom"
+
 // chakra ui
 import {
 	Box,
@@ -56,7 +59,13 @@ export default function CoffeeCard({ coffee }) {
 				<Button p="0" colorScheme="purple" variant="ghost" mr="4">
 					<DeleteIcon fontSize="sm" />
 				</Button>
-				<Button p="0" colorScheme="purple" variant="ghost">
+				<Button
+					as={Link}
+					to={`edit/${coffee.id}`}
+					p="0"
+					colorScheme="purple"
+					variant="ghost"
+				>
 					<EditIcon fontSize="sm" />
 				</Button>
 			</CardFooter>
