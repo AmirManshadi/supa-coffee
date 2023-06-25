@@ -7,7 +7,7 @@ import RootLayout from "./layouts/RootLayout"
 // pages
 import Home, { HomeLoader } from "./pages/Home"
 import Create from "./pages/Create"
-import Edit from "./pages/Edit"
+import Edit, { EditLoader } from "./pages/Edit"
 import ErrorPage from "./pages/ErrorPage"
 
 const router = createBrowserRouter([
@@ -28,6 +28,7 @@ const router = createBrowserRouter([
 			{
 				path: "/edit/:id",
 				element: <Edit />,
+        loader: EditLoader,
 			},
 		],
 	},
