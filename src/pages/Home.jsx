@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router-dom"
 import supabase from "../config/supabaseConfig"
+import CoffeeCard from "../components/CoffeeCard"
+import { SimpleGrid } from "@chakra-ui/react"
 
 export async function HomeLoader() {
 	const { data, error } = await supabase.from("coffees").select()
@@ -11,12 +13,11 @@ export async function HomeLoader() {
 
 export default function Home() {
 	const { data: coffeeRecipes } = useLoaderData()
-	console.log(`🚀 ~ Home ~ coffeeRecipes:`, coffeeRecipes)
 	return (
-		<>
+		<SimpleGrid minChildWidth="300px" spacing="6">
 			{coffeeRecipes.map(coffee => (
-				<div key={coffee.id}>{coffee.title}</div>
+				<CoffeeCard key={coffee.id} coffee={coffee}></CoffeeCard>
 			))}
-		</>
+		</SimpleGrid>
 	)
 }
