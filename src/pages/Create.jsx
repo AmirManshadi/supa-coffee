@@ -1,5 +1,3 @@
 export default function Create() {
-  return (
-    <>Create page</>
-  )
+	return <>Create page</>
 }

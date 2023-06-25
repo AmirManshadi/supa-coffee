@@ -28,7 +28,7 @@ const router = createBrowserRouter([
 			{
 				path: "/edit/:id",
 				element: <Edit />,
-        loader: EditLoader,
+				loader: EditLoader,
 			},
 		],
 	},
