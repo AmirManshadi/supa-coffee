@@ -5,7 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import RootLayout from "./layouts/RootLayout"
 
 // pages
-import Home from "./pages/Home"
+import Home, { HomeLoader } from "./pages/Home"
 import Create from "./pages/Create"
 import Edit from "./pages/Edit"
 import ErrorPage from "./pages/ErrorPage"
@@ -19,6 +19,7 @@ const router = createBrowserRouter([
 			{
 				index: true,
 				element: <Home />,
+				loader: HomeLoader,
 			},
 			{
 				path: "create",
