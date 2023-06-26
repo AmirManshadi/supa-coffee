@@ -27,7 +27,7 @@ export default function RootLayout() {
 			>
 				<Outlet />
 			</Container>
-			<Box as="footer" pos="fixed" bottom="0">
+			<Box as="footer" pos="fixed" bottom="0" zIndex="-2">
 				<img
 					src={citySilhouette}
 					alt="Kaiser Wilhelm Bridge Silhouette"

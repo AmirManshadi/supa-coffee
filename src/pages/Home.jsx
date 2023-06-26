@@ -61,7 +61,7 @@ export default function Home() {
 					Add Coffee
 				</Button>
 			</Flex>
-			<SimpleGrid minChildWidth="300px" spacing="6">
+			<SimpleGrid minChildWidth="300px" spacing="6" mb="40">
 				{coffeeRecipes
 					.sort((a, b) => {
 						if (a[orderBy] < b[orderBy]) {
