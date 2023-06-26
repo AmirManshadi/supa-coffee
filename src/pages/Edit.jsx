@@ -21,13 +21,6 @@ import {
 // chakra ui icons
 import { EditIcon } from "@chakra-ui/icons"
 
-// action function
-export async function EditAction({ request }) {
-	const data = await request.formData()
-	console.log(`🚀 ~ EditAction ~ data:`, data)
-	return null
-}
-
 // loader function
 export async function EditLoader({ params }) {
 	const {
