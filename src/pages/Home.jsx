@@ -3,7 +3,7 @@ import supabase from "../config/supabaseConfig"
 import CoffeeCard from "../components/CoffeeCard"
 import { Button, Flex, HStack, SimpleGrid, Text } from "@chakra-ui/react"
 import { useState } from "react"
-import { AddIcon, PlusSquareIcon } from "@chakra-ui/icons"
+import { AddIcon } from "@chakra-ui/icons"
 
 export async function HomeLoader() {
 	const { data, error } = await supabase.from("coffees").select()
