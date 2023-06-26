@@ -63,6 +63,7 @@ export default function Edit() {
 			templateRows="repeat(4, auto)"
 			gap="6"
 			maxWidth={["300px", "400px"]}
+			mt="8"
 			mx="auto"
 			onSubmit={handleSubmit}
 		>
