@@ -20,7 +20,7 @@ export default function Home() {
 	return (
 		<>
 			<Flex justify="space-between" align="center" mt="10" mb="5">
-				<HStack flexWrap="wrap">
+				<HStack flexWrap="wrap" flexDir={["column", "row"]}>
 					<Text color="purple.700">Order by :</Text>
 					<Button
 						variant="outline"
