@@ -49,7 +49,7 @@ export default function Edit() {
 		const { title, method, rating } = Object.fromEntries(formData)
 		const { error } = await supabase
 			.from("coffees")
-			.update({ title, method, rating })
+			.update({ title, method, rating, created_at: new Date() })
 			.eq("id", coffee.id)
 		if (error) throw new Error(error.message)
 		navigate("/")
