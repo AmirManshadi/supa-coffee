@@ -13,6 +13,7 @@ import {
 
 // chakra ui icons
 import { DeleteIcon, EditIcon } from "@chakra-ui/icons"
+import supabase from "../config/supabaseConfig"
 
 export default function CoffeeCard({ coffee }) {
 	const customStyles = {
@@ -51,12 +52,32 @@ export default function CoffeeCard({ coffee }) {
 		},
 	}
 
+	async function deleteCoffee(e) {
+		const { error } = await supabase
+			.from("coffees")
+			.delete()
+			.eq("id", coffee.id)
+		if (error) throw new Error(error.message)
+		let nearestParent = e.target.parentNode
+		while (nearestParent && !nearestParent.classList.contains("chakra-card")) {
+			nearestParent = nearestParent.parentNode
+		}
+		nearestParent.remove()
+		return
+	}
+
 	return (
 		<Card sx={customStyles.card}>
 			<CardHeader sx={customStyles.cardHeader}>{coffee.title}</CardHeader>
 			<CardBody sx={customStyles.cardBody}>{coffee.method}</CardBody>
 			<CardFooter sx={customStyles.cardFooter}>
-				<Button p="0" colorScheme="purple" variant="ghost" mr="4">
+				<Button
+					p="0"
+					colorScheme="purple"
+					variant="ghost"
+					mr="4"
+					onClick={deleteCoffee}
+				>
 					<DeleteIcon fontSize="sm" />
 				</Button>
 				<Button
